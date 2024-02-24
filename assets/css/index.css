@@ -656,18 +656,22 @@ img {
     border-radius: var(--items-radius);
     padding: var(--padding);
     font-size: var(--desc);
+    background-color: var(--white);
     background-repeat: no-repeat;
     background-position: bottom right 20px;
+    transition: var(--transition);
+}
+
+.register .list a:hover {
+    background-color: var(--beige);
 }
 
 .register .list a:nth-child(1) {
-    background-color: var(--white);
     background-image: url("../img/home/register1.png");
     background-size: 27%;
 }
 
 .register .list a:nth-child(2) {
-    background-color: var(--beige);
     background-image: url("../img/home/register2.png");
     background-size: 35%;
 }
@@ -771,6 +775,11 @@ img {
     border-radius: var(--items-radius);
     background-repeat: no-repeat;
     background-position: bottom right;
+    transition: var(--transition);
+}
+
+.type .item .list2 a:hover {
+    background-color: var(--beige);
 }
 
 .type .item .list2 a:nth-child(1) {
@@ -786,7 +795,6 @@ img {
 .type .item .list2 a:nth-child(3) {
     background-image: url("../img/home/kuzov.webp");
     background-size: 60%;
-    background-color: var(--beige);
 }
 
 .type .item .list2 a:nth-child(4) {
@@ -815,11 +823,62 @@ img {
         width: 100%;
         height: 200px;
     }
-
-    .type .item .list2 a:nth-child(3) {
-        order: -1;
-    }
 }
+
+.category__list {
+    margin-top: 120px;
+    display: flex;
+    gap: 25px;
+}
+
+.category__left,
+.category__right {
+    width: 20%;
+}
+
+.category__left ul {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.category__left p {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.category__left ul li {
+    padding: 10px 5px;
+}
+
+.category__left ul li a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray);
+}
+
+.category__left ul li:hover {
+    background-color: #ddd;
+    transition: var(--transition);
+}
+
+.category__right ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.category__items {
+    width: 50%;
+}
+
+
+
+
+
+
+
 
 .footer {
     padding: 40px 0;
