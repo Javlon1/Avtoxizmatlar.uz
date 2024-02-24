@@ -35,6 +35,7 @@ menu.onclick = () => {
     nav.classList.toggle("active_nav")
     navLog.classList.toggle("active_nav")
     opacity.classList.toggle("opacity_act")
+    document.body.style.overflow = document.body.style.overflow === 'hidden' ? '' : 'hidden'; 
 }
 
 opacity.onclick = () => {
@@ -42,5 +43,6 @@ opacity.onclick = () => {
     nav.classList.remove("active_nav")
     navLog.classList.remove("active_nav")
     opacity.classList.remove("opacity_act")
+    document.body.style.overflow = 'auto';
 }
 // nav end

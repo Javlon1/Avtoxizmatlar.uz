@@ -4,6 +4,7 @@
     --white: #fff;
     --black: #242729;
     --gray: #8197A8;
+    --dark-gray: #374957;
     --light-gray: #F0F6FA;
     --primary: #1E3779;
     --blue: #B0D9FF;
@@ -17,33 +18,34 @@
 
     --padding: 20px;
     --radius: 30px;
+    --items-radius: 20px;
 
     --title: 56px;
-    --content-title: 50px;
-    --desc: 25px;
+    --content-title: 40px;
+    --desc: 26px;
 }
 
 @media only screen and (max-width: 991px) {
     :root {
-        --title: 40px;
-        --content-title: 50px;
+        --title: 45px;
+        --content-title: 35px;
         --desc: 25px;
     }
 }
 
 @media only screen and (max-width: 767px) {
     :root {
-        --title: 35px;
-        --content-title: 50px;
+        --title: 40px;
+        --content-title: 30px;
         --desc: 25px;
     }
 }
 
 @media only screen and (max-width: 575px) {
     :root {
-        --title: 30px;
-        --content-title: 50px;
-        --desc: 25px;
+        --title: 35px;
+        --content-title: 25px;
+        --desc: 20px;
     }
 }
 
@@ -73,7 +75,7 @@ body {
 }
 
 ::-webkit-scrollbar {
-    width: .5rem;
+    width: 5px;
 }
 
 ::-webkit-scrollbar-track {
@@ -499,5 +501,86 @@ img {
         margin-top: 25px;
         width: 200px;
         height: 40px;
+    }
+}
+
+.about {
+    padding: 60px 0 100px;
+}
+
+.about .title {
+    width: 70%;
+    font-size: var(--desc);
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.about .item {
+    margin-top: 24px;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.about .item__left {
+    width: 35%;
+    background-color: var(--primary);
+    color: var(--white);
+    border-radius: var(--items-radius);
+    padding: var(--padding);
+}
+
+.about .item__right {
+    width: 55%;
+    display: flex;
+    align-items: center;
+}
+
+.about .item__right ul {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+}
+
+.about .item__right ul li {
+    width: 210px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--dark-gray);
+}
+
+@media only screen and (max-width: 991px) {
+
+    .about .title {
+        width: 100%;
+    }
+
+    .about .item {
+        flex-direction: column;
+    }
+
+    .about .item__left {
+        width: 100%;
+    }
+
+    .about .item__right {
+        width: 100%;
+    }
+
+    .about .item__right ul {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+
+    .about .item__right ul li {
+        width: 210px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        color: var(--dark-gray);
     }
 }
