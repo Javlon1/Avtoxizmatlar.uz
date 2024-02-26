@@ -200,6 +200,18 @@ img {
     justify-content: space-between;
 }
 
+.nav__img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+}
+
+.nav__img a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
 .nav__item {
     display: flex;
     align-items: center;
