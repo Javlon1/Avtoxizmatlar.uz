@@ -58,3 +58,30 @@ document.getElementById("myInput").addEventListener("blur", function () {
     document.getElementById("myDropdown").classList.remove("show");
 });
 // Dropdown End
+
+// 
+document.addEventListener("DOMContentLoaded", function () {
+    var titleElement = document.getElementById('title');
+
+    var ulElement = document.getElementById('list');
+
+    titleElement.addEventListener('click', function (event) {
+        if (ulElement.classList.contains('show')) {
+            ulElement.classList.remove('show');
+        } else {
+            ulElement.classList.add('show');
+        }
+
+        event.stopPropagation();
+    });
+
+
+    ulElement.addEventListener('click', function (event) {
+        event.stopPropagation();
+    });
+
+    document.addEventListener('click', function () {
+        ulElement.classList.remove('show');
+    });
+});
+// 
