@@ -1211,6 +1211,7 @@ img {
 
     .category__items__list .item .item__left ul {
         flex-direction: row;
+        flex-wrap: wrap;
     }
 
     .category__items__list .item .item__right {
