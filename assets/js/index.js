@@ -24,6 +24,18 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // Scroll Up end
 
+// Scrolling Start
+document.addEventListener('DOMContentLoaded', function () {
+    var list = document.getElementById('list1');
+
+    list.addEventListener('wheel', function (event) {
+        event.preventDefault();
+        var delta = event.deltaY || event.detail || event.wheelDelta; // Получаем значение прокрутки
+        list.scrollLeft += delta * 0.5;
+    });
+});
+// Scrolling End
+
 // nav start
 const menu = document.getElementById("menu");
 const nav = document.querySelector(".nav__item");
@@ -61,15 +73,18 @@ document.getElementById("myInput").addEventListener("blur", function () {
 
 // 
 document.addEventListener("DOMContentLoaded", function () {
-    var titleElement = document.getElementById('title');
+    const titleElement = document.getElementById('title');
 
-    var ulElement = document.getElementById('list');
+    const ulElement = document.getElementById('list');
+    const chevron = document.querySelector(".fa-chevron-down");
 
     titleElement.addEventListener('click', function (event) {
         if (ulElement.classList.contains('show')) {
             ulElement.classList.remove('show');
+            chevron.classList.remove("rotate");
         } else {
             ulElement.classList.add('show');
+            chevron.classList.add("rotate");
         }
 
         event.stopPropagation();
@@ -82,11 +97,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.addEventListener('click', function () {
         ulElement.classList.remove('show');
+        chevron.classList.remove("rotate");
     });
 });
 // 
 
-
+//Akkardion Start 
 document.addEventListener("DOMContentLoaded", function () {
     const addresses = document.querySelectorAll(".detail__addres");
 
@@ -108,3 +124,4 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+//Akkardion End 
