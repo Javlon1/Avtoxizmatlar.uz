@@ -85,3 +85,15 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 });
 // 
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const title = document.getElementById("address");
+    const list = document.querySelector(".detail__list");
+    const chevron = document.querySelector(".fa-chevron-down");
+
+    title.addEventListener("click", function () {
+        list.classList.toggle("address-act");
+        chevron.classList.toggle("rotate");
+    });
+});
