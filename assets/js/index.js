@@ -88,12 +88,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 document.addEventListener("DOMContentLoaded", function () {
-    const title = document.getElementById("address");
-    const list = document.querySelector(".detail__list");
-    const chevron = document.querySelector(".fa-chevron-down");
+    const addresses = document.querySelectorAll(".detail__addres");
 
-    title.addEventListener("click", function () {
-        list.classList.toggle("address-act");
-        chevron.classList.toggle("rotate");
+    addresses.forEach(function (address) {
+        const title = address.querySelector(".title");
+        const list = address.querySelector(".detail__list");
+        const chevron = address.querySelector(".fa-chevron-down");
+
+        title.addEventListener("click", function () {
+            addresses.forEach(function (addr) {
+                if (addr !== address) {
+                    addr.querySelector(".detail__list").classList.remove("address-act");
+                    addr.querySelector(".fa-chevron-down").classList.remove("rotate");
+                }
+            });
+
+            list.classList.toggle("address-act");
+            chevron.classList.toggle("rotate");
+        });
     });
 });
