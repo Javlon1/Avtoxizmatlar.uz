@@ -100,16 +100,24 @@ button {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: none !important;
+}
+
+p {
+    margin: 0 !important;
 }
 
 ul {
-    padding-left: 0;
-    margin-bottom: 0;
+    padding-left: 0 !important;
+    margin-bottom: 0 !important;
 }
 
 li {
     list-style-type: none;
+}
+
+h3 {
+    margin: 0 !important;
 }
 
 img {
@@ -1286,11 +1294,12 @@ img {
 }
 
 .detail__addres .title h3 {
+
     font-size: var(--desc);
 }
 
 .detail__list {
-    display: flex;
+    display: none;
     width: 100%;
     height: 0;
     gap: 15px;
@@ -1336,6 +1345,7 @@ img {
 }
 
 .address-act {
+    display: flex !important;
     height: auto;
     padding: var(--padding);
     opacity: 1;
@@ -1508,6 +1518,121 @@ img {
         width: 100%;
     }
 }
+
+.profil__gallery {
+    flex: 1;
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    padding: var(--padding);
+    border-radius: var(--items-radius);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.profil__gallery .title h3 {
+    color: var(--black);
+    font-size: var(--desc);
+}
+
+.profil__gallery__list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.profil__gallery__list li {
+    width: 150px;
+    height: 150px;
+    background-color: #dddddd80;
+    overflow: hidden;
+    border-radius: 5px;
+    position: relative;
+}
+
+.profil__gallery__list li a {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--black);
+    top: 0;
+    right: 0;
+    z-index: 2;
+    width: 25px;
+    height: 25px;
+    border-radius: 5px;
+    background-color: var(--beige);
+}
+
+.profil__gallery__list li img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.profil__form .btn {
+    width: 150px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: var(--items-radius);
+}
+
+.profil__form {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.profil__form .file-input-container {
+    width: 50%;
+    position: relative;
+    overflow: hidden;
+    display: inline-block;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: #ddd;
+}
+
+.file-input-container input[type=file] {
+    position: absolute;
+    font-size: 100px;
+    opacity: 0;
+    right: 0;
+    top: 0;
+}
+
+@media only screen and (max-width: 991px) {
+    .profil__gallery__list li {
+        width: 45%;
+        height: 200px;
+    }
+}
+
+@media only screen and (max-width: 575px) {
+    .profil__gallery__list li {
+        height: 150px;
+    }
+    .profil__form .btn {
+        width: 100%;
+    }
+
+    .profil__form .file-input-container {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
 
 
 
