@@ -1868,18 +1868,127 @@ img {
     }
 }
 
+.login {
+    padding: 120px 0 140px;
+}
+
+.login__items {
+    max-width: 600px;
+    margin: 0 auto;
+    border: 1px solid #7B92A4;
+    border-radius: 16px;
+    padding: var(--padding);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.login__items__title {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login__items__title h3 {
+    font-size: var(--content-title);
+}
+
+.login__items__title p {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login__items__title p a {
+    color: #008DEB;
+}
+
+.login__items__form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.login__items__form div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.login__items__form div span {
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.login__items__form div input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 2px solid #7B92A4;
+    font-size: 15px;
+    font-weight: 600;
+    color: #7B92A4;
+}
+
+.login__items__form div input[type="text"]::placeholder {
+    font-size: 15px;
+    font-weight: 600;
+    color: #7B92A4;
+}
+
+.login__items__form .check {
+    display: flex;
+    flex-direction: row;
+}
 
 
+.login__items__form .check input[type="checkbox"] {
+    display: none;
+}
 
+.login__items__form .check label {
+    font-size: 15px;
+    font-weight: 600;
+}
 
+.login__items__form .check label::before {
+    content: "";
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 2px solid var(--gray);
+    border-radius: 5px;
+    vertical-align: middle;
+    margin-right: 5px;
+    transition: .2s all ease;
+}
 
+.login__items__form .check input[type="checkbox"]:checked+label::before {
+    content: "";
+    background-color: var(--orange);
+    border: 2px solid var(--orange);
+    background-image: url("../img/check.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px;
+}
 
+.login__items__form button {
+    width: 200px;
+    height: 44px;
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--white);
+    background-color: var(--primary);
+    border-radius: var(--items-radius);
+}
 
-
-
-
-
-
+@media only screen and (max-width: 575px) {
+    .login__items__form button {
+        width: 100%;
+    }
+}
 
 
 
