@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 // Scroll Up end
 
-// Scrolling Start
+// Scrolling Row Start
 document.addEventListener('DOMContentLoaded', function () {
     var list = document.getElementById('list1');
 
@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', function () {
         list.scrollLeft += delta * 0.5;
     });
 });
-// Scrolling End
+// Scrolling Row End
 
 // nav start
 const menu = document.getElementById("menu");
@@ -124,11 +124,45 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+const gallery = document.getElementById("gallery")
+const galleryIcon = document.getElementById("gallery-icon")
+const galleryList = document.getElementById("gallery-list")
+
+gallery.addEventListener("click",()=>{
+    galleryIcon.classList.toggle("rotate")
+    galleryList.classList.toggle("gallery-act")
+})
 //Akkardion End 
 
-// Input Pattren Start
-document.getElementById('phoneInput').addEventListener('input', function (e) {
-    let x = e.target.value.replace(/\D/g, '').match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})(\d{0,2})/);
-    e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[4] ? ' ' + x[4] : '') + (x[5] ? ' ' + x[5] : '') + (x[6] ? ' ' + x[6] : '');
+// Input Pattern Start
+document.getElementById('phoneInput1').addEventListener('input', function (e) {
+    let inputValue = e.target.value.replace(/\D/g, '');
+    
+    // Проверка начала номера на "998"
+    if (!inputValue.startsWith('998')) {
+        inputValue = '998' + inputValue;
+    }
+    
+    let x = inputValue.match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})(\d{0,2})/);
+    if (x !== null) {
+        e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[4] ? ' ' + x[4] : '') + (x[5] ? ' ' + x[5] : '');
+    }
 });
-// Input Pattren End
+
+
+document.getElementById('phoneInput2').addEventListener('input', function (e) {
+    let inputValue = e.target.value.replace(/\D/g, '');
+    
+    // Проверка начала номера на "998"
+    if (!inputValue.startsWith('998')) {
+        inputValue = '998' + inputValue;
+    }
+    
+    let x = inputValue.match(/(\d{0,3})(\d{0,2})(\d{0,3})(\d{0,2})(\d{0,2})(\d{0,2})/);
+    if (x !== null) {
+        e.target.value = !x[2] ? x[1] : x[1] + ' ' + x[2] + (x[3] ? ' ' + x[3] : '') + (x[4] ? ' ' + x[4] : '') + (x[5] ? ' ' + x[5] : '');
+    }
+});
+// Input Pattern End
+

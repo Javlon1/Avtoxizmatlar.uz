@@ -1368,6 +1368,10 @@ img {
     opacity: 1;
 }
 
+.gallery-act {
+    display: block !important;
+}
+
 @media only screen and (max-width: 575px) {
     .detail__list li p {
         font-size: 14px;
@@ -1384,10 +1388,19 @@ img {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.detail__gallery .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
 .detail__gallery .title h3 {
     font-size: var(--desc);
 }
 
+.tz-gallery {
+    display: none;
+}
 
 .tz-gallery .thumbnail {
     padding: 0;
@@ -1546,9 +1559,20 @@ img {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
+.profil__gallery .title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
 .profil__gallery .title h3 {
     color: var(--black);
     font-size: var(--desc);
+}
+
+.activee {
+    display: none;
 }
 
 .profil__gallery__list {
