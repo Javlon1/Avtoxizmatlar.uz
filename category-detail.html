@@ -132,6 +132,30 @@
                         </ul>
                     </div>
 
+                    <div id="modalOpasitiy" onclick="closeModal()" class="modelOpasitiy"></div>
+                    <div id="modalContent" class="myModal">
+                        <p>
+                            <i onclick="closeModal()" class="fa-solid fa-x"></i>
+                        </p>
+                        <div class="top">
+                            <h5>avtoxizmatlar.uz</h5>
+                            <h4>+998901234567</h4>
+                            <b>Avtosoz</b>
+                            <p>Xizmat ko’rsatuvchiga uni avtoxizmatlar.uz dan topganingizni ayting</p>
+                        </div>
+                        <div class="bottom">
+                            <b>Qo’ng’iroq qilamizmi ?</b>
+                            <ul>
+                                <li>
+                                    <a href="tel:+998901234567">Ha</a>
+                                </li>
+                                <li>
+                                    <button onclick="closeModal()">Yo’q</button>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                     <div class="category__items">
                         <h2>Profil</h2>
                         <p class="des">Profil e’lonlar oynasida</p>
@@ -186,11 +210,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>

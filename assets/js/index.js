@@ -136,6 +136,136 @@ gallery.addEventListener("click", () => {
 //Akkardion End 
 
 // Input Pattern Start
+function checkUzbekNumber(number) {
+    number = number.replace(/\s/g, '');
 
+    if (!number.startsWith("998")) {
+        number = "998" + number;
+    }
+
+    if (number.length !== 12) {
+        return false;
+    }
+
+    let formattedNumber = number.slice(0, 3) + " " + number.slice(3, 5) + " " + number.slice(5, 8) + " " + number.slice(8, 10) + " " + number.slice(10);
+
+    return formattedNumber;
+}
+
+function formatPhoneNumber() {
+    let input = document.getElementById("phoneNumberInput");
+    let phoneNumber = input.value;
+    let formattedNumber = checkUzbekNumber(phoneNumber);
+    if (formattedNumber) {
+        input.value = formattedNumber;
+    }
+}
+// 
+function checkUzbekNumber1(number) {
+    number = number.replace(/\s/g, '');
+
+    if (!number.startsWith("998")) {
+        number = "998" + number;
+    }
+
+    if (number.length !== 12) {
+        return false;
+    }
+
+    let formattedNumber = number.slice(0, 3) + " " + number.slice(3, 5) + " " + number.slice(5, 8) + " " + number.slice(8, 10) + " " + number.slice(10);
+
+    return formattedNumber;
+}
+
+function formatPhoneNumber1() {
+    let input = document.getElementById("phoneInput1");
+    let phoneNumber = input.value;
+    let formattedNumber = checkUzbekNumber1(phoneNumber);
+    if (formattedNumber) {
+        input.value = formattedNumber;
+    }
+}
+// 
+function checkUzbekNumber2(number) {
+    number = number.replace(/\s/g, '');
+
+    if (!number.startsWith("998")) {
+        number = "998" + number;
+    }
+
+    if (number.length !== 12) {
+        return false;
+    }
+
+    let formattedNumber = number.slice(0, 3) + " " + number.slice(3, 5) + " " + number.slice(5, 8) + " " + number.slice(8, 10) + " " + number.slice(10);
+
+    return formattedNumber;
+}
+
+function formatPhoneNumber2() {
+    let input = document.getElementById("phoneInput2");
+    let phoneNumber = input.value;
+    let formattedNumber = checkUzbekNumber2(phoneNumber);
+    if (formattedNumber) {
+        input.value = formattedNumber;
+    }
+}
 // Input Pattern End
 
+// Password Start
+function checkPasswordMatch() {
+    var password1 = document.getElementById("password1").value;
+    var password2 = document.getElementById("password2").value;
+    var matchMessage = document.getElementById("passwordMatch");
+
+    if (password1 === password2) {
+        matchMessage.innerHTML = "";
+    } else {
+        matchMessage.innerHTML = "Parollar mos kelmadi!";
+    }
+}
+// Password End
+
+// Modal Start
+function openModal() {
+    document.body.style.overflow = "hidden";
+    document.getElementById("modalContent").classList.add("modalActiv");
+    document.getElementById("modalOpasitiy").classList.add("modalActiv");
+}
+
+function closeModal() {
+    document.getElementById("modalContent").classList.remove("modalActiv");
+    document.getElementById("modalOpasitiy").classList.remove("modalActiv");
+    document.body.style.overflow = "auto";
+}
+
+window.onclick = function (event) {
+    let modal = document.getElementById("modalContent");
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+// Modal End
+
+// SubCategory Start
+function toggleClass(button) {
+    var list1Item = button.closest('.list1__item'); 
+    var subCategory = document.querySelector('.subCategory'); 
+
+    var hasClass = list1Item.classList.contains('subCategoryAct');
+
+    var allListItems = document.querySelectorAll('.list1__item');
+    allListItems.forEach(function (item) {
+        item.classList.remove('subCategoryAct');
+    });
+    var allSubCategories = document.querySelectorAll('.subCategory');
+    allSubCategories.forEach(function (item) {
+        item.classList.remove('subCategoryAct');
+    });
+
+    if (!hasClass) {
+        list1Item.classList.add('subCategoryAct');
+        subCategory.classList.add('subCategoryAct');
+    }
+}
+// SubCategory End

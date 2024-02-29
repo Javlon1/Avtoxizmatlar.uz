@@ -174,6 +174,29 @@
                         <h2>Shinomontaj </h2>
                         <p class="des">Andijon shahri</p>
                         <ul class="category__items__list">
+                            <div id="modalOpasitiy" onclick="closeModal()" class="modelOpasitiy"></div>
+                            <div id="modalContent" class="myModal">
+                                <p>
+                                    <i onclick="closeModal()" class="fa-solid fa-x"></i>
+                                </p>
+                                <div class="top">
+                                    <h5>avtoxizmatlar.uz</h5>
+                                    <h4>+998901234567</h4>
+                                    <b>Avtosoz</b>
+                                    <p>Xizmat ko’rsatuvchiga uni avtoxizmatlar.uz dan topganingizni ayting</p>
+                                </div>
+                                <div class="bottom">
+                                    <b>Qo’ng’iroq qilamizmi ?</b>
+                                    <ul>
+                                        <li>
+                                            <a href="tel:+998901234567">Ha</a>
+                                        </li>
+                                        <li>
+                                            <button onclick="closeModal()">Yo’q</button>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                             <li class="item">
                                 <div class="item__left">
                                     <a href="category-detail.html">
@@ -228,11 +251,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
@@ -293,11 +316,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
@@ -358,11 +381,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
@@ -423,11 +446,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
@@ -488,11 +511,11 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
@@ -553,11 +576,76 @@
                                         </div>
                                     </div>
                                     <div class="item__right__bottom">
-                                        <a href="tel:+998905251243">
+                                        <a onclick="openModal()">
                                             <i class="fa-solid fa-phone"></i>
                                             Telefon
                                         </a>
-                                        <a href="http://">
+                                        <a href="#">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            Anijon shahar, Boburshox, 23a uy
+                                        </a>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="item">
+                                <div class="item__left">
+                                    <a href="category-detail.html">
+                                        <img src="./assets/img/category/face.png" alt="">
+                                    </a>
+                                    <ul>
+                                        <li>
+                                            <i class="fa-solid fa-house"></i>
+                                            <p>2 ta joyda</p>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-clock"></i>
+                                            <p>00:00-00:00</p>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-credit-card"></i>
+                                            <p>Karta</p>
+                                        </li>
+                                        <li>
+                                            <i class="fa-solid fa-money-bill"></i>
+                                            <p>Naqd pul</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="item__right">
+                                    <div class="item__right__top">
+                                        <div class="reting">
+                                            <div class="titles">
+                                                <a href="category-detail.html">
+                                                    <h3>Avtosoz</h3>
+                                                </a>
+                                                <b><span><i class="fa-solid fa-star"></i></span>0 reyting </b>
+                                            </div>
+                                            <p>Andijon shahar, 222 yo’lida, proyezd</p>
+                                        </div>
+                                        <div class="categorys">
+                                            <ul class="list1">
+                                                <li>
+                                                    <a href="#">Moy almashtirish</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Motor sozlamalari</a>
+                                                </li>
+                                                <li>
+                                                    <a href="#">Yana 12 ta xizmatlar</a>
+                                                </li>
+                                            </ul>
+                                            <ul class="list2">
+                                                <li><span></span>kelishilgan holda</li>
+                                                <li><span></span>kelishilgan holda</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <div class="item__right__bottom">
+                                        <a onclick="openModal()">
+                                            <i class="fa-solid fa-phone"></i>
+                                            Telefon
+                                        </a>
+                                        <a href="#">
                                             <i class="fa-solid fa-location-dot"></i>
                                             Anijon shahar, Boburshox, 23a uy
                                         </a>
